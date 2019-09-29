@@ -7,7 +7,8 @@ if ($x<$y){
 
 for ($i=$x; $i<=$y ; $i++) { 
     for ($j=$x; $j<=$y; $j++) { 
-        $res[$i][$j] = $i*$j;
+        $res[$j][$i] = $i * $j;
+       
     }
 }
 ?>
@@ -17,10 +18,11 @@ foreach ($res as $k1 => $v1) {
 ?>
     <tr style="border: 1px solid;">
     <?php
-    foreach ($v1 as $k2 => $v2) { 
+    foreach ($v1 as $k2 => $v2) {
+         
         ?>
         <td style="border: 1px solid;"> <?php 
-        echo $k1 . '*' . $k2 . '=' . $v2 ; 
+        echo $k2 . '*' . $k1 . '=' . $v2 ; 
         ?> </td>
 
      <?php   
@@ -37,9 +39,6 @@ else {
     echo '<p> x должно быть меньше чем y</p>' ;
 }
 
-
-
-//var_dump ($res);
 
 
 
